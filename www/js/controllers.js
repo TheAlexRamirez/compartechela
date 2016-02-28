@@ -41,10 +41,30 @@ angular.module('app.controllers', ['ionic','ngCordova'])
 	
 })
    
-.controller('enviaCtrl', function($scope) {
+.controller('enviaCtrl', function($scope, $state, $cordovaGeolocation) {
 
-})
-   
+	var options = {timeout: 10000, enableHighAccuracy: true};
+ 
+  $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+ 
+    var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+ 
+    var mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+ 
+  }, function(error){
+    console.log("Could not get location");
+  });
+	
+	
+	
+ 
+})   
 .controller('ajustesCtrl', function($scope) {
 
 })
@@ -65,7 +85,7 @@ angular.module('app.controllers', ['ionic','ngCordova'])
 
 })
    
-.controller('catalogoCtrl', function($scope,$http,$state, $ionicSlideBoxDelegate) {
+.controller('catalogoCtrl', function($scope,$http,$state, $ionicSlideBoxDelegate,$ionicModal) {
 
 	$scope.next = function() {
     $ionicSlideBoxDelegate.next();
@@ -95,6 +115,25 @@ angular.module('app.controllers', ['ionic','ngCordova'])
                 $scope.$apply();
             });
    });
+	
+	 $ionicModal.fromTemplateUrl('contact-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal
+  })  
+
+  $scope.openModal = function() {
+    $scope.modal.show()
+  }
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
 	   
 	
 })

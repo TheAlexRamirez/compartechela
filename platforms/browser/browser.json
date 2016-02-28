@@ -12,12 +12,16 @@
         },
         "com.showkit.cordova.showkit": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
     "modules": [],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.1",
-        "com.showkit.cordova.showkit": "1.0.2"
+        "com.showkit.cordova.showkit": "1.0.2",
+        "cordova-plugin-geolocation": "2.1.0"
     }
 }

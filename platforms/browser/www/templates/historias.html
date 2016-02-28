@@ -9,12 +9,12 @@
         <script id="contact-modal.html" type="text/ng-template">
   <div class="modal">
     <ion-header-bar>
-      <h1 class="title">Revive Momentos</h1>
+      <h1 class="title">Revive Historias</h1>
     </ion-header-bar>
     <ion-content>
       
-      <video controls poster="../img/2preview.jpg"></video>
-      
+      <video poster="img/2preview.jpg" style="width:350px">
+		</video>
 	  
       <button class="button button-full button-balanced" ng-click="closeModal()">Listo</button>
     </ion-content>
@@ -30,20 +30,23 @@
                         <h2>Telmo Guell</h2>
                         <p>¡Chingonas las cervezas!</p>
                     </ion-item>
+                    
                     <ion-item ng-click="openModal()" class="item-thumbnail-left">
                         <img id="his" src="img/avatar-b.png">
                         <h2>Ale ramirez</h2>
                         <p>Gracias por las chelas, te extraño menos.</p>
                     </ion-item>
+                    
                     <ion-item ng-click="openModal()" class="item-thumbnail-left">
                         <img id="his" src="img/avatar-e.png">
                         <h2>Josue Aviles</h2>
-                        <p>Llego varias cervezas</p>
+                        <p>Llegaron muchas cervezas</p>
                     </ion-item>
+                    
                     <ion-item ng-click="openModal()" class="item-thumbnail-left">
                         <img id="his" src="img/avatar-j.png">
                         <h2>Jonathan Coutiño</h2>
-                        <p>Llego varias cervezas</p>
+                        <p>¡Muchas gracias, tío!</p>
                     </ion-item>
                 </ion-list>
             </div>

@@ -81,6 +81,12 @@ background-size: cover;
 	
 }
 
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+
 hr{
 	width: 60px;
 	box-shadow: #fff;

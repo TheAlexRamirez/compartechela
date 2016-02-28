@@ -11,5 +11,28 @@
 				<p>{{beer.description}}</p>
 			</a>
 		</div>
+		
+		
+		
+		<script id="contact-modal.html" type="text/ng-template">
+  <div class="modal">
+    <ion-header-bar>
+      <h1 class="title">Confirma pedido</h1>
+    </ion-header-bar>
+    <ion-content style="text-align:center;" >
+      
+      Fecha: <input type="date" style="border-bottom: 1px solid gray; width: 90%; display:inline;margin: 0 auto;" placeholder="Dia"><br>
+      
+      Hora: <input type="text" style="border-bottom: 1px solid gray; width: 50%; display:inline;margin: 0 auto;" placeholder="00:00 hrs">
+       
+      <button class="button button-full button-balanced" ng-click="closeModal()">Listo</button>
+    </ion-content>
+  </div>
+</script>
+	
+	
+		<button ui-sref="tabsController.catalogo" class="button button-energized button-block " ng-click="openModal()" id="btn-two">Confirmar pedido</button>
+		
+		
 	</ion-content>
 </ion-view>

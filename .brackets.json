@@ -5,6 +5,9 @@
         "/home/alex/Escritorio/compartechela/platforms/browser/platform_www/cordova-js-src/confighelper.js",
         "/home/alex/Escritorio/compartechela/www/js/services.js",
         "/home/alex/Escritorio/compartechela/platforms/browser/cordova/lib/check_reqs.js",
-        "/home/alex/Escritorio/compartechela/platforms/ios/www/js/controllers.js"
+        "/home/alex/Escritorio/compartechela/platforms/ios/www/js/controllers.js",
+        "/home/alex/Escritorio/compartechela/platforms/ios/www/lib/ionic/js/ionic.js",
+        "/home/alex/Escritorio/compartechela/platforms/browser/www/js/services.js",
+        "/home/alex/Escritorio/compartechela/platforms/browser/platform_www/cordova-js-src/platform.js"
     ]
 }
