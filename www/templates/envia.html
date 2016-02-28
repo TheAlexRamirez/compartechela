@@ -1,11 +1,18 @@
 <ion-view title="Envia">
-    <ion-content overflow-scroll="true" padding="true" style="background: url(img/VY7wsbtjSMaVNme6CIrG_Captura%2520de%2520pantalla%25202016-02-27%2520a%2520las%25206.04.27%2520p.m..png) no-repeat center;" class="has-header">
-        <form class="list">
-            <label class="item item-input">
+    <ion-content overflow-scroll="true" padding="true" style="background: url(img/map.png) no-repeat center;" class="has-header">
+        <form class="list" id="directions">
+            <label class="item item-input" id="directions-input">
+                <span class="input-label">Tu :</span>
+                <input type="text" placeholder="¿Dónde está tu amigo?">
+            </label>
+        </form>
+        <form class="list" >
+            <label class="item item-input" id="directions-input">
                 <span class="input-label">Para :</span>
                 <input type="text" placeholder="¿Dónde está tu amigo?">
             </label>
         </form>
-        <button class="button button-energized button-block ">Continuar</button>
+        <button class="button button-energized button-block " id="btn-two">ELEGIR LAS CHELAS</button>
+        <p id="pblank">Para poder continuar es necesario que nos indiques ambas direcciones, tuya y la de tu cuate</p>
     </ion-content>
 </ion-view>

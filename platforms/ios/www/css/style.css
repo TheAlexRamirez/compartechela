@@ -1,0 +1,103 @@
+#btn{
+	border-radius: 30px;
+}
+
+#bgvid {
+
+position: fixed;
+
+top: 50%;
+
+left: 50%;
+
+min-width: 100%;
+
+min-height: 100%;
+
+width: auto;
+
+height: auto;
+
+z-index: -100;
+
+-webkit-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-ms-transform: translateX(-50%) translateY(-50%);
+-o-transform: translateX(-50%) translateY(-50%);
+
+transform: translateX(-50%) translateY(-50%);
+
+background: url(http://video.webmfiles.org/big-buck-bunny_trailer.webm) no-repeat;
+
+background-size: cover;
+
+}
+#his{
+	border-radius: 30px;
+}
+
+#directions{
+	padding-top: 220px;
+}
+
+#directions-input{
+	margin-bottom: -17px;
+}
+
+#pblank{
+	color: #fff;
+	font-size: 10px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 9px;
+}
+
+#btn-two{
+	width: 280px;
+	margin-left: 10px;
+}
+
+#menu-color{
+	background-color: #00AAEF;
+}
+
+#hero-text{
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+#hero-text2{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+#btn-bar{
+	border-radius: 30px;
+}
+#logoweb{
+	width: 100px;
+	
+}
+
+hr{
+	width: 60px;
+	box-shadow: #fff;
+}
+#btn-3{
+	
+}
+
+#back-photo{
+	position: absolute;
+	top: -20px;
+}
+
+#bg-containg{
+	top:100px;
+	
+}
+.hero-section{
+	margin-left: 700px;
+}

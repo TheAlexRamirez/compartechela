@@ -1,4 +1,4 @@
-<ion-view title="Live">
+<ion-view title="Live" ng-controller="VideoCtrl">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
             <label class="item item-input">
@@ -18,6 +18,6 @@
                 </ion-item>
             </ion-list>
         </form>
-        <button class="button button-balanced button-block  icon-left ion-ios-videocam">Iniciar</button>
+        <button class="button button-energized button-block  icon-left ion-ios-videocam" ng-click="captureVideo()" id="btn">Iniciar</button>
     </ion-content>
 </ion-view>

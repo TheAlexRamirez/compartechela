@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['ionic','ngCordova'])
   
 .controller('historiasCtrl', function($scope) {
 
@@ -24,11 +24,21 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('catalogoCtrl', function($scope) {
+.controller('catalogoCtrl', function($scope,$http) {
 
-})
+	$scope.catalogo ={};
+   $scope.catalogo.items=[];
    
-.controller('liveCtrl', function($scope) {
 
-})
+   $http.get('http://safe-cove-98296.herokuapp.com/v1/beers').then(function (response) {
+
+    //alert(JSON.stringify(response));
+
+   $scope.catalogo.items= response.data.beers;
+   });
+	   
+	
+}).controller('VideoCtrl', function($scope, $cordovaCapture, VideoService) {
+    // TBD
+});
  

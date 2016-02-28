@@ -91,6 +91,12 @@ angular.module('app.routes', [])
       }
     }
   })
+  
+  .state('friends', {
+    url: '/friend',
+    templateUrl: 'templates/friend.html',
+    controller: 'friendCtrl'
+  })
 
 $urlRouterProvider.otherwise('/page5')
 
