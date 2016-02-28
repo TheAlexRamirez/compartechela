@@ -22,6 +22,8 @@ angular.module('app.controllers', ['ionic','ngCordova'])
    
 .controller('perfilCtrl', function($scope) {
 
+}).controller('friendCtrl', function($scope) {
+
 })
    
 .controller('catalogoCtrl', function($scope,$http) {
@@ -40,5 +42,7 @@ angular.module('app.controllers', ['ionic','ngCordova'])
 	
 }).controller('VideoCtrl', function($scope, $cordovaCapture, VideoService) {
     // TBD
+
+	
 });
  
