@@ -1,0 +1,9 @@
+{
+	"db": {
+		"host": "ds049104.mlab.com",
+		"port": "49104",
+		"username": "josue",
+		"password": "comparte",
+		"name": "compartechela"
+	}
+}
