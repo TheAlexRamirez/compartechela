@@ -13,3 +13,7 @@ Simply add the project to your projects directory or
  ```javascript
  	$ phonegap serve
 ```
+
+You can preview the mockups of the final app.
+
+https://projects.invisionapp.com/share/DG68HIKQC#/screens
