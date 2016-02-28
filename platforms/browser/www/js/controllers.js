@@ -1,7 +1,44 @@
 angular.module('app.controllers', ['ionic','ngCordova'])
   
-.controller('historiasCtrl', function($scope) {
+.controller('historiasCtrl', function($scope,$ionicModal) {
 
+	$scope.histories = [
+		{
+    name: 'Telmo Guell',
+    video_src: 'img/2preview.jpg'}, 
+		{
+    name: 'Alex Ramirez',
+    video_src: 'img/2preview.jpg'},
+		{
+    name: 'Josue Aviles',
+    video_src: 'img/2preview.jpg'},
+		{
+    name: 'Jonathan Coutiño',
+    video_src: 'img/2preview.jpg'},
+					   ];
+	
+
+  $ionicModal.fromTemplateUrl('contact-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal
+  })  
+
+  $scope.openModal = function() {
+    $scope.modal.show()
+  }
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+	
+	
+	
 })
    
 .controller('enviaCtrl', function($scope) {

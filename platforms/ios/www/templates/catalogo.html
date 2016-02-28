@@ -1,24 +1,15 @@
 <ion-view title="Catalogo" ng-controller="catalogoCtrl" >
-   <ion-content overflow-scroll="true" padding="true" class="has-header">
-           
-    
-
-           <label class="item item-input">
-               <i class="icon ion-search placeholder-icon"></i>
-               <input type="search" placeholder="" ng-model="search">
-           </label>
-           
-         <div class="list">
-
-			  <a ng-repeat="beer in catalogo.items | filter : search" class="item item-avatar">
+	<ion-content overflow-scroll="true" padding="true" class="has-header">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" placeholder="" ng-model="search">
+		</label>
+		<div class="list">
+			<a ng-repeat="beer in catalogo.items | filter : search" class="item item-avatar">
 				<img style="width:150px;" ng-src={{beer.url}}>
 				<h2>{{beer.name}}</h2>
 				<p>{{beer.description}}</p>
-			  </a>
-
-
+			</a>
 		</div>
-  	
-
-   </ion-content>
+	</ion-content>
 </ion-view>
