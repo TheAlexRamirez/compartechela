@@ -1,0 +1,15 @@
+{
+    "VideoToolbox.framework": 1,
+    "CoreImage.framework": 1,
+    "Security.framework": 1,
+    "OpenGLES.framework": 1,
+    "AVFoundation.framework": 1,
+    "QuartzCore.framework": 1,
+    "CFNetwork.framework": 1,
+    "CoreVideo.framework": 1,
+    "CoreMedia.framework": 1,
+    "AudioToolbox.framework": 1,
+    "SystemConfiguration.framework": 2,
+    "libresolv.dylib": 1,
+    "libz.dylib": 1
+}
