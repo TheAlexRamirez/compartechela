@@ -11,5 +11,5 @@ Simply add the project to your projects directory or
  run the command
  
  ```javascript
- 	phonegap serve
+ 	$ phonegap serve
 ```
