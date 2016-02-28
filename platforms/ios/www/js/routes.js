@@ -22,12 +22,14 @@ angular.module('app.routes', [])
 
   .state('tabsController.envia', {
     url: '/page3',
-    views: {
+        views: {
       'tab5': {
         templateUrl: 'templates/envia.html',
         controller: 'enviaCtrl'
       }
     }
+
+    
   })
 
   .state('tabsController.ajustes', {
@@ -90,6 +92,12 @@ angular.module('app.routes', [])
         controller: 'liveCtrl'
       }
     }
+  })
+  
+  .state('friends', {
+    url: '/friends',
+	templateUrl: 'templates/friend.html',
+	controller: 'friendCtrl'
   })
 
 $urlRouterProvider.otherwise('/page5')

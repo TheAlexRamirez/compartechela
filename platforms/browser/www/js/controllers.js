@@ -24,10 +24,24 @@ angular.module('app.controllers', ['ionic','ngCordova'])
 
 }).controller('friendCtrl', function($scope) {
 
+}).controller('liveCtrl', function($scope) {
+
 })
    
-.controller('catalogoCtrl', function($scope,$http) {
+.controller('catalogoCtrl', function($scope,$http,$state, $ionicSlideBoxDelegate) {
 
+	$scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+	
 	$scope.catalogo ={};
    $scope.catalogo.items=[];
    
@@ -37,12 +51,31 @@ angular.module('app.controllers', ['ionic','ngCordova'])
     //alert(JSON.stringify(response));
 
    $scope.catalogo.items= response.data.beers;
+	   
+	   setTimeout(function() {
+                $ionicSlideBoxDelegate.slide(0);
+                $ionicSlideBoxDelegate.update();
+                $scope.$apply();
+            });
    });
 	   
 	
-}).controller('VideoCtrl', function($scope, $cordovaCapture, VideoService) {
+})
+.controller('VideoCtrl', function($scope, $cordovaCapture, VideoService) {
     // TBD
 
+$scope.clip = '';
+ 
+$scope.captureVideo = function() {
+	$cordovaCapture.captureVideo().then(function(videoData) {
+		VideoService.saveVideo(videoData).success(function(data) {
+			$scope.clip = data;
+			$scope.$apply();
+		}).error(function(data) {
+			console.log('ERROR: ' + data);
+		});
+	});
+};
 	
 });
  
